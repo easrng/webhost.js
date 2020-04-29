@@ -79,8 +79,7 @@ require("greenlock-express")
     .init({
         packageRoot: "/home/pi/sites/",
         configDir: "./greenlock.d",
-        // contact for security and critical bug notices
-        maintainerEmail: "easrng@gmail.com",
+        maintainerEmail: process.env.MAINTAINER_EMAIL,
         // whether or not to run at cloudscale
         cluster: false
     })
